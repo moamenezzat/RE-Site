@@ -1,0 +1,58 @@
+header
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 18vh
+  display: flex
+  justify-content: center
+  align-items: center
+  align-content: center
+
+
+.logo
+  height: 100%
+  display: inline-block
+  img
+    height: 100%
+    width: auto
+
+.header-btn
+  height: 3em
+  width: 3em
+  border-radius: 50%
+  background: white
+  border: none
+  position: absolute
+  bottom: 0
+  cursor: pointer
+  // font-size: 1rem
+  &.nav
+    left: 3em
+    span
+      width: 1em
+      height: 2px
+      display: block
+      margin-bottom: .2em
+      position: relative
+      left: 1em
+      background-color: $maincolor
+    p
+      color: $maincolor
+      font-size: .8rem
+      text-transform: uppercase
+      text-align: center
+      margin-top: .5em
+  &.share
+    right: 3em
+    background: url("../Sources/Icons/Share.svg") no-repeat center, white
+    background-size: 1.5em
+
+.section-indicator
+  height: 50vh
+  width: 1.5em
+  border-radius: 2em
+  position: fixed
+  top: 25vh
+  left: 3.75em
+  background-color: rgba(255, 255, 255, 0.73)

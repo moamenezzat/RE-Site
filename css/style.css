@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "b";
+  src: url("../Sources/Fonts/b/b.eot");
+  src: url("../Sources/Fonts/b/b.ttf"), url("../Sources/Fonts/b/b.woff2") format("woff2"), url("../Sources/Fonts/b/b.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "q";
+  src: url("../Sources/Fonts/q/q.eot");
+  src: url("../Sources/Fonts/q/q.ttf"), url("../Sources/Fonts/q/q.woff2") format("woff2"), url("../Sources/Fonts/q/q.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "q";
+  src: url("../Sources/Fonts/qb/qb.eot");
+  src: url("../Sources/Fonts/qb/qb.ttf"), url("../Sources/Fonts/qb/qb.woff2") format("woff2"), url("../Sources/Fonts/qb/qb.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 18px;
+  font-family: "q"; }
+
+body {
+  position: relative;
+  overflow-x: hidden; }
+
+h1 {
+  font-family: "b"; }
+
+p {
+  font-size: 1rem; }
+
+.section-header {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-left: 4em; }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.logo {
+  height: 100%;
+  display: inline-block; }
+  .logo img {
+    height: 100%;
+    width: auto; }
+
+.header-btn {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer; }
+  .header-btn.nav {
+    left: 3em; }
+    .header-btn.nav span {
+      width: 1em;
+      height: 2px;
+      display: block;
+      margin-bottom: 0.2em;
+      position: relative;
+      left: 1em;
+      background-color: #297666; }
+    .header-btn.nav p {
+      color: #297666;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 0.5em; }
+  .header-btn.share {
+    right: 3em;
+    background: url("../Sources/Icons/Share.svg") no-repeat center, white;
+    background-size: 1.5em; }
+
+.section-indicator {
+  height: 50vh;
+  width: 1.5em;
+  border-radius: 2em;
+  position: fixed;
+  top: 25vh;
+  left: 3.75em;
+  background-color: rgba(255, 255, 255, 0.73); }
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1rem; }
+
+.landing {
+  background: url("../Sources/Images/1.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .landing .container {
+    height: 50vh;
+    padding: 0.5em 0;
+    background-color: rgba(41, 118, 102, 0.3); }
+    .landing .container .section-header {
+      color: white; }
+
+.landing-shows-container {
+  display: flex;
+  flex-direction: column;
+  height: 95%; }
+
+.landing-show {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .landing-show h2 {
+    font-family: "q";
+    font-weight: 700;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    letter-spacing: 1.2px; }
+  .landing-show p {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1em 4em;
+    letter-spacing: 5px;
+    line-height: 1.5; }
