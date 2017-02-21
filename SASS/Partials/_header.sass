@@ -8,6 +8,7 @@ header
   justify-content: center
   align-items: center
   align-content: center
+  z-index: 1
 
 
 .logo
@@ -53,6 +54,29 @@ header
   width: 1.5em
   border-radius: 2em
   position: fixed
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  align-content: center
   top: 25vh
   left: 3.75em
+  z-index: 1
   background-color: rgba(255, 255, 255, 0.73)
+  span
+    height: .7em
+    width: .7em
+    border-radius: 50%
+    background-color: white
+    cursor: pointer
+    transition: all .6s ease-in-out
+    &.here
+      transform: scale(1.5)
+  &::after
+    content: ""
+    width: 1px
+    height: 90%
+    position: absolute
+    top: 5%
+    left: calc(50% - .5px)
+    background-color: white

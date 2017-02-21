@@ -1,0 +1,29 @@
+.services
+  background-color: $maincolor
+  position: relative
+  &::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background-image: url("../Sources/Images/pattern.png")
+    background-repeat: no-repeat
+    background-size: cover
+    opacity: .1
+  .title
+    height: calc(100vw/3)
+    transform: translateY(-50%)
+    border: 8px solid white
+    width: calc(100vw/3)
+    margin: 0 auto
+    display: flex
+    align-items: flex-end
+
+    h1
+      font-size: 2.5rem
+      color: white
+      letter-spacing: 2px
+      text-transform: uppercase
+      margin: 0 0 .1em .1em
