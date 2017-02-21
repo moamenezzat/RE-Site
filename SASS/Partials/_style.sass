@@ -1,0 +1,86 @@
+.style .navigation
+  height: 15%
+  display: flex
+  justify-content: space-around
+  align-items: center
+  align-content: center
+  margin-left: 5.5em
+  .navigation
+    display: flex
+    justify-content: space-around
+  .section-header
+    color: $maincolor
+    font-size: 2.5rem
+    text-transform: capitalize
+    margin-left: 0
+    &::after
+      width: 75%
+      background-color: $maincolor
+
+
+.style-btn
+  color: rgb(179, 179, 179)
+  text-transform: uppercase
+  padding: .2em .5em
+  font-size: 1.5rem
+  background: none
+  margin: 0 .3em
+  cursor: pointer
+
+  &.active
+    color: $maincolor
+    border: 2px solid $seconderycolor
+    border-radius: .3em
+
+.window
+  margin-left: 15em
+  width: 70vh
+  height: 70vh
+  border: 10px solid black
+  margin-top: 7.5vh
+  padding: calc(5vh - 10px) 1em
+
+.window-image
+  height: 60vh
+  width:  107vh
+  background: url("../Sources/Images/limah_design_portfolio_live_work_dar_al_jewar_image (3).jpg") no-repeat center
+  background-size: cover
+  position: relative
+  &::after
+    position: absolute
+    height: 15%
+    content: ""
+    top: 0
+    left: 0
+    width: 100%
+    background-color: rgba(255, 255, 255, 0.4)
+
+.windw-btn
+  background: none
+  border: none
+  font-size: 1.5rem
+  font-family: "b"
+  position: absolute
+  left: 7%
+  top: 7.5%
+  transform: translateY(-50%)
+  z-index: 1
+  cursor: pointer
+  &::before
+    content: ""
+    width: 1em
+    height: 100%
+    position: absolute
+    top: -2px
+    background-size: 100%
+  &.prev
+    &::before
+      left: -1.2em
+      background: url("../Sources/Icons/back-arrow-circular.svg") no-repeat center
+      background-size: 100%
+
+  &.next
+    left: 20%
+    &::before
+      right: -1.2em
+      background: url("../Sources/Icons/forwards-arrow-circular.svg") no-repeat center
