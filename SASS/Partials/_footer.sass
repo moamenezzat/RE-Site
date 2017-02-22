@@ -11,27 +11,23 @@ footer
       color: white
       padding: 1em 0 0em
       &.social
-        display: flex
-        justify-content: space-between
-        align-items: center
-        align-content: center
+        display: table-cell
         padding: 1em 2em 0em 0
         .icon
           width: 1.5em
           height: 1.5em
           text-decoration: none
           background-size: 80%
+          display: inline-block
           margin: 0
           &.linkedin
             background: url("../Sources/Icons/linkedin.svg") no-repeat center
+            margin: 0 .5em
           &.facebook
             background: url("../Sources/Icons/fb.svg") no-repeat center
           &.twitter
             background: url("../Sources/Icons/tw.svg") no-repeat center
-          &.ios
-            background: url("../Sources/Icons/apple.svg") no-repeat center
-          &.android
-            background: url("../Sources/Icons/android.svg") no-repeat center
+            margin: 0 .5em
       &.apps
         display: table-cell
         padding: 1em 2em 0em 0
@@ -89,6 +85,9 @@ footer
     width: 20vw
     background: rgba(255,255,255,.1)
     height: 3em
+    display: flex
+    align-items: center
+    justify-content: space-between
     border-radius: 2em
     margin: .5em auto
     label
@@ -100,7 +99,7 @@ footer
       border: none
       color: white
       padding: 0 1em
-      width: calc(20vw - 4.4em)
+      width: calc(20vw - 5.4em)
       &[type="submit"]
         width: 3em
         height: 3em
@@ -108,6 +107,8 @@ footer
         background-size: 60%
         border-radius: 50%
         cursor: pointer
+        font-size: .9rem
+        margin-right: .3em
 .credit
   margin-top: 1em
   border-top: 1px solid rgba(255,255,255,.1)

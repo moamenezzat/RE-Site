@@ -63,7 +63,7 @@
     margin-top: .5em
 
 .news
-  height: 50vh
+  height: 45vh
   position: relative
   margin-top: 1em
 .news .slider-wrapper
@@ -84,19 +84,23 @@
   background-position: center
   background-repeat: no-repeat
   z-index: 3
+  transition: all .6s ease-in-out
   &.left
     left: 1em
     background-image: url("../Sources/Icons/move-to-back.svg")
   &.right
     right: 1em
     background-image: url("../Sources/Icons/move-to-next.svg")
-
+  &.faded
+    opacity: .3
+    cursor: not-allowed
 .news-container
   display: inline-flex
   height: 100%
   width: auto
+  transition: all .6s ease-in-out
 .new
-  width: 19vw
+  width: 18.5vw
   height: 100%
   margin: 0 1vw
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 0 55%, 5% 50%, 0% 45%)
@@ -116,3 +120,4 @@
     letter-spacing: 2px
   p
     font-size: .7rem
+    line-height: 1.3

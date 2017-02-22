@@ -62,14 +62,30 @@ header
   left: 3.75em
   z-index: 100
   background-color: rgba(255, 255, 255, 0.73)
+  transition: all .6s ease-in-out
   span
     height: .7em
     width: .7em
     border-radius: 50%
     background-color: white
     cursor: pointer
+    z-index: 1
+    position: relative
+    border: 2px solid transparent
     transition: all .6s ease-in-out
-    &.here
+  &.landing-section
+    span:first-child
+      transform: scale(1.5)
+  &.community-section
+    span:nth-child(2)
+      transform: scale(1.5)
+  &.plan-section
+    span:nth-child(3)
+      transform: scale(1.5)
+      border: 2px solid $maincolor
+  &.style-section
+    background: rgba($maincolor, .4)
+    span:nth-child(4)
       transform: scale(1.5)
   &::after
     content: ""
@@ -79,3 +95,4 @@ header
     top: 5%
     left: calc(50% - .5px)
     background-color: white
+    z-index: 0
