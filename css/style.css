@@ -3,19 +3,26 @@
   src: url("../Sources/Fonts/b/b.eot");
   src: url("../Sources/Fonts/b/b.ttf"), url("../Sources/Fonts/b/b.woff2") format("woff2"), url("../Sources/Fonts/b/b.woff") format("woff");
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "q";
   src: url("../Sources/Fonts/q/q.eot");
   src: url("../Sources/Fonts/q/q.ttf"), url("../Sources/Fonts/q/q.woff2") format("woff2"), url("../Sources/Fonts/q/q.woff") format("woff");
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "q";
   src: url("../Sources/Fonts/qb/qb.eot");
   src: url("../Sources/Fonts/qb/qb.ttf"), url("../Sources/Fonts/qb/qb.woff2") format("woff2"), url("../Sources/Fonts/qb/qb.woff") format("woff");
   font-weight: 700;
-  font-style: normal; }
+  font-style: normal;
+}
+
+/* line 1, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_reset.sass */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -34,50 +41,106 @@ time, mark, audio, video, button {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
+/* line 22, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_reset.sass */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
+/* line 26, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_reset.sass */
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
+/* line 29, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_reset.sass */
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
+/* line 32, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_reset.sass */
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
+/* line 35, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_reset.sass */
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
-  content: none; }
+  content: '';
+  content: none;
+}
 
+/* line 40, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_reset.sass */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
+/* line 4, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 6, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
 html {
   font-size: 18px;
-  font-family: "q"; }
+  font-family: "q";
+}
 
+/* line 10, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
 body {
   position: relative;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
-h1 {
-  font-family: "b"; }
+/* line 16, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
+h1, h2 {
+  font-family: "b";
+}
 
+/* line 20, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
 p {
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
+/* line 23, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
 .section-header {
   font-size: 1.5rem;
-  text-decoration: underline;
-  margin-left: 4em; }
+  margin-left: 4em;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
 
+/* line 30, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 100%;
+  left: -1.5px;
+  background-color: white;
+}
+
+/* line 39, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* line 44, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_base.sass */
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 1, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
 header {
   position: absolute;
   top: 0;
@@ -87,95 +150,877 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center; }
+  align-content: center;
+  z-index: 1;
+}
 
+/* line 14, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
 .logo {
   height: 100%;
-  display: inline-block; }
-  .logo img {
-    height: 100%;
-    width: auto; }
+  display: inline-block;
+}
 
+/* line 17, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
+.logo img {
+  height: 100%;
+  width: auto;
+}
+
+/* line 21, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
 .header-btn {
   height: 3em;
   width: 3em;
   border-radius: 50%;
-  background: white;
-  border: none;
   position: absolute;
   bottom: 0;
-  cursor: pointer; }
-  .header-btn.nav {
-    left: 3em; }
-    .header-btn.nav span {
-      width: 1em;
-      height: 2px;
-      display: block;
-      margin-bottom: 0.2em;
-      position: relative;
-      left: 1em;
-      background-color: #297666; }
-    .header-btn.nav p {
-      color: #297666;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      text-align: center;
-      margin-top: 0.5em; }
-  .header-btn.share {
-    right: 3em;
-    background: url("../Sources/Icons/Share.svg") no-repeat center, white;
-    background-size: 1.5em; }
+  cursor: pointer;
+  background-color: white;
+}
 
+/* line 30, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
+.header-btn.nav {
+  left: 3em;
+}
+
+/* line 32, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
+.header-btn.nav span {
+  width: 1em;
+  height: 2px;
+  display: block;
+  margin-bottom: .2em;
+  position: relative;
+  left: 1em;
+  background-color: #297666;
+}
+
+/* line 40, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
+.header-btn.nav p {
+  color: #297666;
+  font-size: .8rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: .5em;
+}
+
+/* line 46, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
+.header-btn.share {
+  right: 3em;
+  background: url("../Sources/Icons/Share.svg") no-repeat center, white;
+  background-size: 1.5em;
+}
+
+/* line 51, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
 .section-indicator {
   height: 50vh;
   width: 1.5em;
   border-radius: 2em;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
   top: 25vh;
   left: 3.75em;
-  background-color: rgba(255, 255, 255, 0.73); }
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.73);
+}
 
+/* line 65, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
+.section-indicator span {
+  height: .7em;
+  width: .7em;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: all .6s ease-in-out;
+}
+
+/* line 72, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
+.section-indicator span.here {
+  transform: scale(1.5);
+}
+
+/* line 74, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_header.sass */
+.section-indicator::after {
+  content: "";
+  width: 1px;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: calc(50% - .5px);
+  background-color: white;
+}
+
+/* line 1, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
 .section {
   width: 100vw;
   height: 100vh;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
+/* line 6, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
 .landing {
   background: url("../Sources/Images/1.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
-  .landing .container {
-    height: 50vh;
-    padding: 0.5em 0;
-    background-color: rgba(41, 118, 102, 0.3); }
-    .landing .container .section-header {
-      color: white; }
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
 
+/* line 14, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.landing .container {
+  height: 50vh;
+  padding: .5em 0;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(41, 118, 102, 0.3);
+}
+
+/* line 20, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.landing .container .section-header {
+  color: white;
+}
+
+/* line 24, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
 .landing-shows-container {
-  display: flex;
-  flex-direction: column;
-  height: 95%; }
+  height: 95%;
+  transform: translate3d(0, 0, 0);
+  transition: all .6s ease-in-out;
+}
 
+/* line 29, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
 .landing-show {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
-  .landing-show h2 {
-    font-family: "q";
-    font-weight: 700;
-    font-size: 4rem;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    letter-spacing: 1.2px; }
-  .landing-show p {
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    padding: 1em 4em;
-    letter-spacing: 5px;
-    line-height: 1.5; }
+  justify-content: center;
+}
+
+/* line 34, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.landing-show h2 {
+  font-family: "q";
+  font-weight: 700;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  letter-spacing: 1.2px;
+}
+
+/* line 42, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.landing-show p {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1em 4em;
+  letter-spacing: 5px;
+  line-height: 1.5;
+}
+
+/* line 51, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.landing-shows-indicators {
+  position: absolute;
+  top: 50%;
+  right: 2em;
+  transform: translateY(-50%);
+}
+
+/* line 56, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.landing-shows-indicators span {
+  width: .7em;
+  height: .7em;
+  border-radius: 50%;
+  margin: .6em 0;
+  display: block;
+  cursor: pointer;
+  background-color: white;
+}
+
+/* line 65, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.scroll-down {
+  display: inline-block;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* line 71, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.scroll-down h2 {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  color: white;
+}
+
+/* line 75, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_landing.sass */
+.scroll-down .down-arrow {
+  height: 4em;
+  border: 2px solid white;
+  background: url("../Sources/Icons/down.svg") no-repeat center;
+  background-size: 40%;
+}
+
+/* line 1, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.community {
+  background-color: #297666;
+  position: relative;
+  height: calc(130vh + 10em);
+}
+
+/* line 5, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.community::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url("../Sources/Images/pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .1;
+}
+
+/* line 16, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.community .title {
+  height: 18em;
+  transform: translateY(-50%);
+  border: 8px solid white;
+  width: 18em;
+  margin: 0 auto -9em;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* line 26, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.community .title h1 {
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 .3em .3em;
+}
+
+/* line 33, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.activites, .news {
+  height: 75vh;
+  position: relative;
+  z-index: 2;
+  margin-left: 5.5em;
+  margin-right: 1em;
+}
+
+/* line 39, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.activites h1, .news h1 {
+  font-size: 2.5rem;
+  margin-left: 1.6em;
+  color: white;
+}
+
+/* line 44, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.events {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* line 52, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.event {
+  width: calc((100vw - 5em)/4);
+  margin: 2em;
+  cursor: pointer;
+}
+
+/* line 56, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.event img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 7px 20px 0px #000;
+}
+
+/* line 60, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.event p {
+  text-align: center;
+  color: white;
+  margin-top: .5em;
+}
+
+/* line 65, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.news {
+  height: 50vh;
+  position: relative;
+  margin-top: 1em;
+}
+
+/* line 69, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.news .slider-wrapper {
+  height: 85%;
+  width: 90%;
+  display: block;
+  margin: 1em auto 0;
+  overflow: hidden;
+}
+
+/* line 77, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.news-btn {
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+/* line 87, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.news-btn.left {
+  left: 1em;
+  background-image: url("../Sources/Icons/move-to-back.svg");
+}
+
+/* line 90, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.news-btn.right {
+  right: 1em;
+  background-image: url("../Sources/Icons/move-to-next.svg");
+}
+
+/* line 94, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.news-container {
+  display: inline-flex;
+  height: 100%;
+  width: auto;
+}
+
+/* line 98, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.new {
+  width: 19vw;
+  height: 100%;
+  margin: 0 1vw;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 0 55%, 5% 50%, 0% 45%);
+}
+
+/* line 103, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.new .new-image {
+  height: 50%;
+  width: 100%;
+  background: url("../Sources/Images/03 copy 2.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* line 108, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.new .new-details {
+  height: 50%;
+  width: 100%;
+  background: white;
+  padding: 2em 1em;
+}
+
+/* line 113, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.new h3 {
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  letter-spacing: 2px;
+}
+
+/* line 117, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_community.sass */
+.new p {
+  font-size: .7rem;
+}
+
+/* line 1, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_plan.sass */
+.plan {
+  position: relative;
+}
+
+/* line 3, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_plan.sass */
+.shadow {
+  height: 20%;
+  width: 100%;
+  background: linear-gradient(to bottom, white, #bbb9b9);
+  position: relative;
+}
+
+/* line 8, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_plan.sass */
+.shadow h1 {
+  color: grey;
+  font-size: 11.7vw;
+  line-height: 11.7vh;
+  letter-spacing: 5px;
+  opacity: .3;
+  pointer-events: none;
+  transform: scaleY(1.6);
+  transform-origin: top center;
+  position: relative;
+}
+
+/* line 28, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_plan.sass */
+.plan-preview {
+  width: 100%;
+  height: 80%;
+  background: url("../Sources/Images/dar-1.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* line 33, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_plan.sass */
+.plan-preview h1 {
+  text-align: center;
+  font-size: 4rem;
+  transform: translateY(-0.6em);
+}
+
+/* line 37, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_plan.sass */
+.plan-preview p {
+  text-align: center;
+  width: 45%;
+  display: block;
+  margin: 1em auto;
+  line-height: 1.4;
+  transform: translateY(-3em);
+}
+
+/* line 45, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_plan.sass */
+.open-preview {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #297666;
+  color: white;
+  text-decoration: none;
+  padding: .3em 2em .2em;
+  border-radius: .3em;
+  letter-spacing: 10px;
+  font-size: 2rem;
+}
+
+/* line 1, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.style {
+  position: relative;
+}
+
+/* line 3, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.style .navigation {
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-left: 5.5em;
+}
+
+/* line 10, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.style .navigation .navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 13, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.style .navigation .section-header {
+  color: #297666;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-left: 0;
+}
+
+/* line 18, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.style .navigation .section-header::after {
+  width: 75%;
+  background-color: #297666;
+}
+
+/* line 23, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.style-btn {
+  color: #b3b3b3;
+  text-transform: uppercase;
+  padding: .2em .5em;
+  font-size: 1.5rem;
+  margin: 0 .3em;
+  cursor: pointer;
+}
+
+/* line 31, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.style-btn.active {
+  color: #297666;
+  border: 2px solid #ffa800;
+  border-radius: .3em;
+}
+
+/* line 36, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.window {
+  margin-left: 15em;
+  width: 70vh;
+  height: 70vh;
+  border: 10px solid black;
+  margin-top: 7.5vh;
+  padding: calc(5vh - 10px) 1em;
+}
+
+/* line 44, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.window-image-container {
+  height: 60vh;
+  width: 107vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 51, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.window-image-container::after {
+  position: absolute;
+  height: 15%;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* line 60, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.windw-btn {
+  font-size: 1.5rem;
+  font-family: "b";
+  position: absolute;
+  left: 7%;
+  top: 7.5%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* line 69, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.windw-btn::before {
+  content: "";
+  width: 1em;
+  height: 100%;
+  position: absolute;
+  top: -2px;
+  background-size: 100%;
+}
+
+/* line 77, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.windw-btn.prev::before {
+  left: -1.2em;
+  background: url("../Sources/Icons/back-arrow-circular.svg") no-repeat center;
+  background-size: 100%;
+}
+
+/* line 82, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.windw-btn.next {
+  left: 20%;
+}
+
+/* line 84, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.windw-btn.next::before {
+  right: -1.2em;
+  background: url("../Sources/Icons/forwards-arrow-circular.svg") no-repeat center;
+}
+
+/* line 88, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.window-image {
+  width: 100%;
+  height: 100%;
+  background: url("../Sources/Images/limah_design_portfolio_live_work_dar_al_jewar_image (3).jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* line 94, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.window-info {
+  position: absolute;
+  right: 4vw;
+  top: 45.5vh;
+  height: 30vh;
+  width: 40vw;
+  padding: 1em .3em;
+  background-color: #297666;
+}
+
+/* line 103, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.titles-container {
+  width: 100%;
+  height: 25%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 109, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.titles-container h1 {
+  color: #ffa800;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: .5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 117, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.desc-container {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 122, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.desc-container p {
+  color: white;
+  font-size: .8rem;
+  position: absolute;
+  left: 1.4em;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 2;
+}
+
+/* line 131, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_style.sass */
+.window-info-btn {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  width: 1.5em;
+  height: 1.5em;
+  background: url("../Sources/Icons/close.svg") no-repeat center;
+  background-size: 80%;
+}
+
+/* line 1, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer {
+  background: #2c2c2c;
+  padding-top: 2em;
+}
+
+/* line 5, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table {
+  margin-left: 5.7em;
+}
+
+/* line 9, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td {
+  width: calc((100vw - 5.7em)/5);
+  color: white;
+  padding: 1em 0 0em;
+}
+
+/* line 13, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 1em 2em 0em 0;
+}
+
+/* line 19, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.social .icon {
+  width: 1.5em;
+  height: 1.5em;
+  text-decoration: none;
+  background-size: 80%;
+  margin: 0;
+}
+
+/* line 25, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.social .icon.linkedin {
+  background: url("../Sources/Icons/linkedin.svg") no-repeat center;
+}
+
+/* line 27, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.social .icon.facebook {
+  background: url("../Sources/Icons/fb.svg") no-repeat center;
+}
+
+/* line 29, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.social .icon.twitter {
+  background: url("../Sources/Icons/tw.svg") no-repeat center;
+}
+
+/* line 31, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.social .icon.ios {
+  background: url("../Sources/Icons/apple.svg") no-repeat center;
+}
+
+/* line 33, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.social .icon.android {
+  background: url("../Sources/Icons/android.svg") no-repeat center;
+}
+
+/* line 35, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.apps {
+  display: table-cell;
+  padding: 1em 2em 0em 0;
+}
+
+/* line 38, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.apps .icon {
+  width: 1.5em;
+  height: 1.5em;
+  text-decoration: none;
+  background-size: 80%;
+  display: inline-block;
+  margin: 0;
+}
+
+/* line 45, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.apps .icon.ios {
+  background: url("../Sources/Icons/apple.svg") no-repeat center;
+}
+
+/* line 47, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td.apps .icon.android {
+  background: url("../Sources/Icons/android.svg") no-repeat center;
+  margin: 0 .5em;
+}
+
+/* line 50, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+footer table td a {
+  margin: 0 auto;
+  font-size: .8rem;
+  vertical-align: middle;
+}
+
+/* line 57, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.table-header {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0;
+}
+
+/* line 64, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.contact {
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+}
+
+/* line 69, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.phone, .letter {
+  width: 50%;
+}
+
+/* line 71, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.phone h1, .letter h1 {
+  display: table;
+  color: white;
+  font-family: "q";
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  line-height: .8;
+}
+
+/* line 82, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.letter p {
+  color: white;
+  text-align: center;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* line 88, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.letter form {
+  width: 20vw;
+  background: rgba(255, 255, 255, 0.1);
+  height: 3em;
+  border-radius: 2em;
+  margin: .5em auto;
+}
+
+/* line 94, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.letter form label {
+  font-size: 0;
+}
+
+/* line 97, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.letter form input {
+  height: 100%;
+  background: none;
+  border: none;
+  color: white;
+  padding: 0 1em;
+  width: calc(20vw - 4.4em);
+}
+
+/* line 104, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.letter form input[type="submit"] {
+  width: 3em;
+  height: 3em;
+  background: url("../Sources/Icons/mail.svg") no-repeat center, linear-gradient(to top, #ffc80b, #ffc80b);
+  background-size: 60%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* line 111, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.credit {
+  margin-top: 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: .5em .5em 0;
+}
+
+/* line 115, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.credit .links {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+/* line 121, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.credit .links .KEC {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+/* line 125, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.credit .links .KEC p {
+  color: white;
+  text-align: center;
+  font-size: .5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+/* line 132, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.credit .links .KEC p bdi {
+  letter-spacing: 0px;
+  font-size: .8rem;
+  font-family: sans-serif;
+}
+
+/* line 137, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.credit .links a {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  ont-size: .8rem;
+}
+
+/* line 142, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.credit .copyright {
+  padding: 1em;
+}
+
+/* line 144, C:/Users/MOAEZZAT/Desktop/RE-Site/sass/partials/_footer.sass */
+.credit .copyright p {
+  color: #787878;
+  font-size: .6rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=../css/style.map */
