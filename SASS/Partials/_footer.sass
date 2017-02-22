@@ -1,0 +1,147 @@
+footer
+  background: rgb(44,44,44)
+  // height: 50vh
+  padding-top: 2em
+  table
+    margin-left: 5.7em
+    tr
+      // padding: .5em 0
+    td
+      width: calc((100vw - 5.7em)/5)
+      color: white
+      padding: 1em 0 0em
+      &.social
+        display: flex
+        justify-content: space-between
+        align-items: center
+        align-content: center
+        padding: 1em 2em 0em 0
+        .icon
+          width: 1.5em
+          height: 1.5em
+          text-decoration: none
+          background-size: 80%
+          margin: 0
+          &.linkedin
+            background: url("../Sources/Icons/linkedin.svg") no-repeat center
+          &.facebook
+            background: url("../Sources/Icons/fb.svg") no-repeat center
+          &.twitter
+            background: url("../Sources/Icons/tw.svg") no-repeat center
+          &.ios
+            background: url("../Sources/Icons/apple.svg") no-repeat center
+          &.android
+            background: url("../Sources/Icons/android.svg") no-repeat center
+      &.apps
+        display: table-cell
+        padding: 1em 2em 0em 0
+        .icon
+          width: 1.5em
+          height: 1.5em
+          text-decoration: none
+          background-size: 80%
+          display: inline-block
+          margin: 0
+          &.ios
+            background: url("../Sources/Icons/apple.svg") no-repeat center
+          &.android
+            background: url("../Sources/Icons/android.svg") no-repeat center
+            margin: 0 .5em
+      a
+        margin: 0 auto
+        font-size: .8rem
+        vertical-align: middle
+
+
+
+.table-header
+  font-weight: 700
+  font-size: 1rem
+  text-transform: uppercase
+  letter-spacing: 2px
+  padding: 0
+
+.contact
+  width: 100%
+  margin-top: 1em
+  display: flex
+
+.phone,.letter
+  width: 50%
+  h1
+    display: table
+    color: white
+    font-family: "q"
+    font-weight: 700
+    font-size: 1.5rem
+    margin: 0 auto
+    letter-spacing: 2px
+    line-height: .8
+
+.letter
+  p
+    color: white
+    text-align: center
+    font-size: .6rem
+    font-weight: 700
+    letter-spacing: 2px
+  form
+    width: 20vw
+    background: rgba(255,255,255,.1)
+    height: 3em
+    border-radius: 2em
+    margin: .5em auto
+    label
+      font-size: 0
+
+    input
+      height: 100%
+      background: none
+      border: none
+      color: white
+      padding: 0 1em
+      width: calc(20vw - 4.4em)
+      &[type="submit"]
+        width: 3em
+        height: 3em
+        background: url('../Sources/Icons/mail.svg') no-repeat center, linear-gradient(to top , rgb(255,200,11), rgb(255,200,11))
+        background-size: 60%
+        border-radius: 50%
+        cursor: pointer
+.credit
+  margin-top: 1em
+  border-top: 1px solid rgba(255,255,255,.1)
+  padding: .5em .5em 0
+  .links
+    width: 100%
+    display: inline-flex
+    justify-content: space-around
+    align-items: center
+    align-content: center
+    .KEC
+      display: flex
+      align-items: center
+      align-content: center
+      p
+        color: white
+        text-align: center
+        font-size: .5rem
+        font-weight: 700
+        letter-spacing: 2px
+        line-height: 1.1
+        bdi
+          letter-spacing: 0px
+          font-size: .8rem
+          font-family: sans-serif
+
+    a
+      color: white
+      font-weight: 700
+      letter-spacing: 2px
+      ont-size: .8rem
+  .copyright
+    padding: 1em
+    p
+      color: #787878
+      font-size: .6rem
+      text-align: center

@@ -1,21 +1,23 @@
-.style .navigation
-  height: 15%
-  display: flex
-  justify-content: space-around
-  align-items: center
-  align-content: center
-  margin-left: 5.5em
+.style
+  position: relative
   .navigation
+    height: 15%
     display: flex
     justify-content: space-around
-  .section-header
-    color: $maincolor
-    font-size: 2.5rem
-    text-transform: capitalize
-    margin-left: 0
-    &::after
-      width: 75%
-      background-color: $maincolor
+    align-items: center
+    align-content: center
+    margin-left: 5.5em
+    .navigation
+      display: flex
+      justify-content: space-around
+    .section-header
+      color: $maincolor
+      font-size: 2.5rem
+      text-transform: capitalize
+      margin-left: 0
+      &::after
+        width: 75%
+        background-color: $maincolor
 
 
 .style-btn
@@ -23,7 +25,6 @@
   text-transform: uppercase
   padding: .2em .5em
   font-size: 1.5rem
-  background: none
   margin: 0 .3em
   cursor: pointer
 
@@ -40,12 +41,13 @@
   margin-top: 7.5vh
   padding: calc(5vh - 10px) 1em
 
-.window-image
+.window-image-container
   height: 60vh
   width:  107vh
-  background: url("../Sources/Images/limah_design_portfolio_live_work_dar_al_jewar_image (3).jpg") no-repeat center
-  background-size: cover
+  // background: url("../Sources/Images/limah_design_portfolio_live_work_dar_al_jewar_image (3).jpg") no-repeat center
+  // background-size: cover
   position: relative
+  overflow: hidden
   &::after
     position: absolute
     height: 15%
@@ -56,8 +58,6 @@
     background-color: rgba(255, 255, 255, 0.4)
 
 .windw-btn
-  background: none
-  border: none
   font-size: 1.5rem
   font-family: "b"
   position: absolute
@@ -84,3 +84,55 @@
     &::before
       right: -1.2em
       background: url("../Sources/Icons/forwards-arrow-circular.svg") no-repeat center
+
+.window-image
+  width: 100%
+  height: 100%
+  background: url("../Sources/Images/limah_design_portfolio_live_work_dar_al_jewar_image (3).jpg") no-repeat center
+  background-size: cover
+
+.window-info
+  position: absolute
+  right: 4vw
+  top: 45.5vh
+  height: 30vh
+  width: 40vw
+  padding: 1em .3em
+  background-color: $maincolor
+
+.titles-container
+  width: 100%
+  height: 25%
+  position: relative
+  overflow: hidden
+
+  h1
+    color: $seconderycolor
+    font-size: 2rem
+    text-transform: uppercase
+    position: absolute
+    left: .5em
+    top: 50%
+    transform: translateY(-50%)
+.desc-container
+  width: 100%
+  height: 50%
+  position: relative
+  overflow: hidden
+  p
+    color: white
+    font-size: .8rem
+    position: absolute
+    left: 1.4em
+    top: 50%
+    transform: translateY(-50%)
+    line-height: 2
+
+.window-info-btn
+  position: absolute
+  top: .5em
+  right: .5em
+  width: 1.5em
+  height: 1.5em
+  background: url("../Sources/Icons/close.svg") no-repeat center
+  background-size: 80%
