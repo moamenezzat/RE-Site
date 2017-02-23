@@ -11,7 +11,19 @@
 
   <body>
       <header>
-          <nav></nav>
+          <nav class="hidden">
+            <ul>
+              <li><a href="#" tabindex="-1">Home</a></li>
+              <li><a href="#" tabindex="-1">News &amp; Activities</a></li>
+              <li><a href="#" tabindex="-1">Master Plan</a></li>
+            </ul>
+            <div class="logo-space"></div>
+            <ul>
+              <li><a href="#" tabindex="-1">Life Style</a></li>
+              <li><a href="#" tabindex="-1">Contact</a></li>
+              <li><a href="#" tabindex="-1">Copy Rights</a></li>
+            </ul>
+          </nav>
           <div class="logo">
               <img src="Sources/Images/Logo-color2.png" alt="">
           </div>
@@ -21,7 +33,11 @@
             <span></span>
             <p>Menu</p>
           </button>
-          <button type="button" name="button" class="header-btn share"></button>
+          <div tabindex="0" class="header-btn share">
+            <a class="share-icon close" tabindex="-1"></a>
+            <a href="www.facebook.com" class="share-icon fb" tabindex="-1"></a>
+            <a href="www.twitter.com" class="share-icon tw" tabindex="-1"></a>
+          </div>
       </header>
       <div class="section-indicator landing-section">
           <span  data-section="#landing"></span>
@@ -171,7 +187,7 @@
         <div class="navigation">
           <h1 class="section-header">Life Style.</h1>
           <div class="buttons">
-            <button type="button" name="button" class="style-btn active">community services</button>
+            <button type="button" name="button" class="style-btn a">community services</button>
             <button type="button" name="button" class="style-btn">green zone</button>
             <button type="button" name="button" class="style-btn">sports facility</button>
           </div>
@@ -179,20 +195,34 @@
         <div class="window">
             <div class="window-image-container">
               <div class="controls">
-                <button type="button" name="button" class="windw-btn prev">PREV</button>
-                <button type="button" name="button" class="windw-btn next">NEXT</button>
+                <button type="button" name="button" class="windw-btn prev">PREV <span></span></button>
+                <button type="button" name="button" class="windw-btn next">NEXT <span></span></button>
               </div>
-              <div class="window-image">
-
+              <div class="window-image in">
+                <img src="Sources/Images/limah_design_portfolio_live_work_dar_al_jewar_image (3).jpg" alt="" />
+              </div>
+              <div class="window-image out">
+                <img src="Sources/Images/slide-6.jpg" alt="" />
+              </div>
+              <div class="window-image out">
+                <img src="Sources/Images/01-1-1024x440.jpg" alt="" />
               </div>
             </div>
         </div>
         <div class="window-info">
           <div class="titles-container">
-            <h1>community services</h1>
+            <h1 class="i">community services</h1>
+            <h1 class="down">green zone</h1>
+            <h1 class="down">sports facility</h1>
           </div>
           <div class="desc-container">
-            <p>
+            <p class="here">
+              aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+            <p class="down">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+            <p class="down">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>
           </div>
@@ -301,15 +331,7 @@
         <div class="credit">
           <div class="links">
             <img src="Sources\Images\Logo.png" alt="DAJ logo" />
-            <div class="KEC">
-              <p><bdi dir="rtl">
-                مدينة المعرفة الاقتصادية
-                </bdi>
-                <br>
-                knowledge Economic City
-              </p>
-              <img src="Sources\Images\KEC_Logo.png" alt="KEC logo" />
-            </div>
+            <img class="KEC" src="Sources/Images/kec-logo.png" alt="KEC Logo" />
             <a href="#">PRIVICY POLICY</a>
             <a href="#">TERMS &amp; CONDITIONS</a>
             <a href="#">COPYRIGHT NOTIFICATIONS</a>

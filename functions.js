@@ -19,7 +19,47 @@ landingSectionShows = $(".landing-shows-container"),
 wScroll=0,
 newsInView = 4,
 totalNews=$(".new").length,
-newsSlider=$(".news-container");
+newsSlider=$(".news-container"),
+styleBtns = $(".style-btn"),
+styleWindowImages = $(".window-image"),
+StyleWindowInfo = $(".window-info"),
+styleWindowHeaders = $(".titles-container h1"),
+styleWindowDesc = $(".desc-container p"),
+toggleMenu = $(".header-btn.nav"),
+navMenu = $("header nav"),
+closeWindowInfo = $(".window-info-btn"),
+windowNext = $(".windw-btn.next"),
+windowPrev = $(".windw-btn.prev"),
+newsNext = $(".news-btn.right"),
+newsPrev = $(".news-btn.left"),
+headerShare = $(".header-btn.share"),
+closeHeaderShare = $(".header-btn.share .share-icon.close");
+
+
+var updateWindow = function(target){
+  var targetIndex = styleBtns.index(target),
+  TargetImage = styleWindowImages.eq(targetIndex),
+  targetHeader = styleWindowHeaders.eq(targetIndex),
+  targetDesc = styleWindowDesc.eq(targetIndex),
+  activeBtn = styleBtns.index($(".a")),
+  ActiveImage = styleWindowImages.index($(".in")),
+  activeHeader = styleWindowHeaders.index($(".i")),
+  activeDesc = styleWindowDesc.index($(".here"));
+
+  StyleWindowInfo.removeClass("hidden");
+  if(targetIndex === activeBtn){
+    return false;
+  }else{
+    styleBtns.eq(activeBtn).removeClass("a");
+    styleBtns.eq(targetIndex).addClass("a");
+    styleWindowImages.eq(ActiveImage).removeClass("in").addClass("out");
+    TargetImage.removeClass("out").addClass("in");
+    styleWindowHeaders.eq(activeHeader).removeClass("i").addClass("up").addClass("down");
+    targetHeader.removeClass("up").removeClass("down").addClass("i");
+    styleWindowDesc.eq(activeDesc).removeClass("here").addClass("up").addClass("down");
+    targetDesc.removeClass("up").removeClass("down").addClass("here");
+  }
+};
 
 // Click Events
 sectionIndicatorpoints.on("click", function(){
@@ -41,7 +81,7 @@ landingSectionIndicators.on("click",function(){
     landingSectionShows.css("transform","translate3d(0,-"+(targetIndex*100)+"%,0)");
 });
 
-$(".news-btn.right").on("click",function(){
+newsNext.on("click",function(){
   if(newsInView === totalNews){
     return false
   }else{
@@ -55,7 +95,7 @@ $(".news-btn.right").on("click",function(){
     }
   }
 });
-$(".news-btn.left").on("click",function(){
+newsPrev.on("click",function(){
   if(newsInView === 4){
     return false
   }else{
@@ -68,6 +108,57 @@ $(".news-btn.left").on("click",function(){
       $(this).addClass("faded");
     }
   }
+});
+
+styleBtns.on("click", function(){
+  var $this =$(this);
+  updateWindow($this);
+});
+
+windowPrev.on("click", function(){
+  var $this= $(this),
+  activeBtn = styleBtns.index($(".a")),
+  tagret;
+  console.log(activeBtn);
+  if(activeBtn === 0){
+    target = styleBtns.eq(styleBtns.length - 1);
+  }else{
+    target = styleBtns.eq(activeBtn).prev();
+  }
+  console.log(target);
+  updateWindow(target);
+});
+
+windowNext.on("click", function(){
+  var $this= $(this),
+  activeBtn = styleBtns.index($(".a")),
+  tagret;
+  console.log(activeBtn);
+  if(activeBtn === styleBtns.length - 1){
+    target = styleBtns.eq(0);
+  }else{
+    target = styleBtns.eq(activeBtn).next();
+  }
+  console.log(target);
+  updateWindow(target);
+});
+
+closeWindowInfo.on("click", function(){
+  StyleWindowInfo.addClass("hidden");
+});
+
+toggleMenu.on("click", function(){
+  toggleMenu.toggleClass("close");
+  navMenu.toggleClass("hidden");
+});
+
+headerShare.add(closeHeaderShare).on("click", function(){
+  console.log("clicked");
+  headerShare.toggleClass("open");
+});
+closeHeaderShare.on("click", function(e){
+  e.stopPropagation()
+  headerShare.removeClass("open");
 });
 $(document).ready(function() {
   if((sectionIndicatorPosition +sectionIndicatorHeight/2) < communitySectionPosition  ){

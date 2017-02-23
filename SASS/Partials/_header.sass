@@ -9,11 +9,37 @@ header
   align-items: center
   align-content: center
   z-index: 1
-
+  nav
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: white
+    padding: 0 1em
+    display: flex
+    justify-content: space-between
+    transform: translateY(0)
+    transition: all .6s ease-in-out
+    &.hidden
+      transform: translateY(-150%)
+    .logo-space
+      width: 13%
+    ul
+      display: flex
+      flex-grow: 1
+      justify-content: space-around
+      align-content: center
+      align-items: center
+      li a
+        color: $maincolor
 
 .logo
   height: 100%
   display: inline-block
+  position: relative
+  z-index: 2
+  width: 12.5%
   img
     height: 100%
     width: auto
@@ -25,6 +51,7 @@ header
   position: absolute
   bottom: 0
   cursor: pointer
+  overflow: hidden
   background-color: white
   // font-size: 1rem
   &.nav
@@ -36,17 +63,106 @@ header
       margin-bottom: .2em
       position: relative
       left: 1em
+      transform: translateY(0)
       background-color: $maincolor
+      transition: all .3s ease-in-out .3s
     p
       color: $maincolor
       font-size: .8rem
       text-transform: uppercase
       text-align: center
       margin-top: .5em
+      transform: translateY(0)
+      transition: all .3s ease-in-out .3s
+    &::after
+      content: ""
+      width: 1em
+      height: 2px
+      background: $maincolor
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(250%,-1850%) rotate(45deg)
+      transform-origin: center
+      transition: all .3s ease-in-out
+    &::before
+      content: ""
+      width: 1em
+      height: 2px
+      background: $maincolor
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-250%,-1850%) rotate(-45deg)
+      transform-origin: center
+      transition: all .3s ease-in-out
+  &.nav.close
+    span
+      transform: translateY(-3em)
+      transition: all .3s ease-in-out
+    p
+      transform: translateY(3em)
+      transition: all .3s ease-in-out
+    &::after
+      transform: translate(-50%,-50%) rotate(-45deg)
+      transition: all .3s ease-in-out .3s
+    &::before
+      transform: translate(-50%,-50%) rotate(45deg)
+      transition: all .3s ease-in-out .3s
   &.share
     right: 3em
     background: url("../Sources/Icons/Share.svg") no-repeat center, white
     background-size: 1.5em
+    transition: all .3s ease-in-out .4s
+    overflow: visible
+    &::after
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: white
+      opacity: 0
+      border-radius: 1.5em
+      transition: height .3s ease-in-out, opacity .1s ease-in-out .3s
+    .share-icon
+      width: 1.5em
+      height: 1.5em
+      position: absolute
+      top: 50%
+      left: 50%
+      display: inline-block
+      z-index: 0
+      opacity: 0
+      transform: translate(-50%,-50%)
+      &.close
+        background: url("../Sources/Icons/close-black.svg") no-repeat center
+      &.fb
+        background: url("../Sources/Icons/fb-black.svg") no-repeat center
+      &.tw
+        background: url("../Sources/Icons/tw-black.svg") no-repeat center
+    &.open
+      background: white
+      .share-icon
+        &.close
+          opacity: 1
+          z-index: 2
+          transition: all .3s ease-in-out .4s
+        &.fb
+          opacity: 1
+          z-index: 2
+          transform: translate(-50%, 2.2em)
+          transition: all .6s ease-in-out .4s
+        &.tw
+          opacity: 1
+          z-index: 2
+          transform: translate(-50%, 5.1em)
+          transition: all 1.2s ease-in-out .4s
+      &::after
+        height: 300%
+        opacity: 1
+        transition: opacity .1s ease-in-out, height .3s ease-in-out .1s
 
 .section-indicator
   height: 50vh
