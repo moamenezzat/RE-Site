@@ -50,7 +50,6 @@ header
   border-radius: 50%
   position: absolute
   bottom: 0
-  cursor: pointer
   overflow: hidden
   background-color: white
   // font-size: 1rem
@@ -111,10 +110,12 @@ header
       transition: all .3s ease-in-out .3s
   &.share
     right: 3em
-    background: url("../Sources/Icons/Share.svg") no-repeat center, white
+    background: url("../Sources/Icons/Share.svg") no-repeat , white
     background-size: 1.5em
+    background-position: center
     transition: all .3s ease-in-out .4s
     overflow: visible
+    cursor: pointer
     &::after
       content: ""
       width: 100%
@@ -144,6 +145,7 @@ header
         background: url("../Sources/Icons/tw-black.svg") no-repeat center
     &.open
       background: white
+      background-position: center
       .share-icon
         &.close
           opacity: 1
